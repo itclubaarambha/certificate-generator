@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aarambha X Karta Certificate Generator</title>
+    <link rel="stylesheet" href="style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@400;700&family=Great+Vibes&display=swap"
+        rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+
+</head>
+
+<body>
+    <div class="container">
+        <!-- Header Section -->
+        <header class="header">
+            <div class="header-content">
+                <h1 class="logo">Aarambha X Karta</h1>
+                <p class="tagline">Certificate Generator</p>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Certificate Type Selection -->
+            <section class="certificate-types">
+                <h2 class="section-title">Choose Certificate Type</h2>
+                <div class="types-grid">
+                    <div class="type-card" data-type="completion">
+                        <div class="type-icon">🎓</div>
+                        <h3>Course Completion</h3>
+                        <p>For students who successfully completed a course</p>
+                    </div>
+                    <div class="type-card" data-type="achievement">
+                        <div class="type-icon">🏆</div>
+                        <h3>Achievement</h3>
+                        <p>For outstanding performance and excellence</p>
+                    </div>
+                    <div class="type-card" data-type="participation">
+                        <div class="type-icon">🎯</div>
+                        <h3>Participation</h3>
+                        <p>For active participation in events/workshops</p>
+                    </div>
+                    <div class="type-card" data-type="appreciation">
+                        <div class="type-icon">⭐</div>
+                        <h3>Appreciation</h3>
+                        <p>For valuable contributions and dedication</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Certificate Form -->
+            <section class="certificate-form-section" id="formSection">
+                <h2 class="section-title">Certificate Details</h2>
+                <form id="certificateForm" class="certificate-form">
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="studentName">Student Name <span class="required">*</span></label>
+                            <input type="text" id="studentName" name="studentName" placeholder="Enter full name"
+                                required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="courseName">Course/Event Name <span class="required">*</span></label>
+                            <input type="text" id="courseName" name="courseName"
+                                placeholder="Enter course or event name" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="completionDate">Date <span class="required">*</span></label>
+                            <input type="date" id="completionDate" name="completionDate" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="grade">Grade/Score (Optional)</label>
+                            <input type="text" id="grade" name="grade" placeholder="e.g., A+, 95%, Excellent">
+                        </div>
+
+                        <div class="form-group full-width">
+                            <label for="description">Additional Details (Optional)</label>
+                            <textarea id="description" name="description" rows="3"
+                                placeholder="Enter any additional information"></textarea>
+                        </div>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="button" class="btn btn-secondary" id="resetBtn">Reset</button>
+                        <button type="submit" class="btn btn-primary" id="generateBtn">Generate Certificate</button>
+                    </div>
+                </form>
+            </section>
+
+            <!-- Certificate Preview -->
+            <section class="certificate-preview" id="previewSection">
+                <h2 class="section-title">Certificate Preview</h2>
+                <div class="certificate-container">
+                    <div id="certificate" class="certificate">
+                        <!-- Certificate content will be generated here -->
+                    </div>
+                </div>
+                <div class="preview-actions">
+                    <button class="btn btn-secondary" id="editBtn">Edit Details</button>
+                    <button class="btn btn-primary" id="downloadBtn">Save as PDF</button>
+                    <button class="btn btn-primary" id="downloadPngBtn">Download 4K PNG</button>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>&copy; 2026 KARTA CERTIFICATE GENERATOR. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
